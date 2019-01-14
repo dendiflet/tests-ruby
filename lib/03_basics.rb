@@ -46,10 +46,8 @@ end
   # BONUS : You can do this in one line less than 55 chars
 
 def magic_array(a)
-  z =[]
-  z = a.flatten.sort.map{|i| i*2}
-  z.reject{ |i| i%3 == 0}.uniq!
-  return z
+return a.flatten.sort.map{|i|i*2}.reject{|i|i%3==0}.uniq.sort   
+  
 end
 
 
