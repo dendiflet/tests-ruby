@@ -1,26 +1,24 @@
 def who_is_bigger(e, f, g)
     # Hint: 'def who_is_bigger(a, b, c)'
-  r = [ e, f, g]
-
-  z = {a => e, b => f, c => g }
-   t = 
-    if r.compact! == r
+    r = [ e, f, g]
+    z = {}
+    z = { a => e, b => f, c => g }
+    if r.include?(nil)        #r.include?(nil)
       return "nil detected"
     else
-    q1 = z.key(z.values.max)
-      return "#{q1} is bigger"
-    end
-
+    q1 = z.key(z.values.max)  
+    return "#{q1} is bigger"
+  end
 end
 
 
   # Reverse, upcase then removes all L, T and A.
   # Hint: google ruby string
-#def reverse_upcase_noLTA(a)
-  #a = a.upcase!.reverse!
+def reverse_upcase_noLTA(a)
+  b = a.upcase.reverse.delete "L","T","A"
+  return b
+end
 
-
-#end
 
 
   # 42 finder
@@ -29,10 +27,9 @@ end
   # - false otherwise
   # Hint: Should be 2 lines (and can be one :)
   # Hint: google ruby array each
-#def array_42([1, 2, 3, 4, 5, 6, 7 , 8, 9, 10])
-
-
-#end
+def array_42(a)
+  return a =~/[42]/
+end
 
 
   # crazy stuff on arrays
@@ -45,6 +42,34 @@ end
   # - with each number duplicate removed (any number should appear only once)
   # - sorted
   # BONUS : You can do this in one line less than 55 chars
-#def magic_array([1, 2, 3, 4, 5, 6]))
 
-#end
+def magic_array(a)
+  a.flatten!.uniq!.sort.map!{|i| i = i*2}.delete_if{ |i| i%3 == 0}
+  return a
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
