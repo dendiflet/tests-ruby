@@ -2,7 +2,8 @@ def who_is_bigger(e, f, g)
     # Hint: 'def who_is_bigger(a, b, c)'
     r = [ e, f, g]
     z = {}
-    z = { a => e, b => f, c => g }
+    z = { "a" => e, "b" => f, "c" => g }      #bien mettre les "" sur les key
+    puts
     if r.include?(nil)        #r.include?(nil)
       return "nil detected"
     else
@@ -15,7 +16,7 @@ end
   # Reverse, upcase then removes all L, T and A.
   # Hint: google ruby string
 def reverse_upcase_noLTA(a)
-  b = a.upcase.reverse.delete "L","T","A"
+  b = a.upcase.reverse.delete"LTA" #toutes les lettres sont prises indépendament
   return b
 end
 
@@ -27,8 +28,9 @@ end
   # - false otherwise
   # Hint: Should be 2 lines (and can be one :)
   # Hint: google ruby array each
+
 def array_42(a)
-  return a =~/[42]/
+  return a.any?{|i| i == 42}    #marche pas avec a =~ /[42]/
 end
 
 
@@ -44,8 +46,10 @@ end
   # BONUS : You can do this in one line less than 55 chars
 
 def magic_array(a)
-  a.flatten!.uniq!.sort.map!{|i| i = i*2}.delete_if{ |i| i%3 == 0}
-  return a
+  z =[]
+  z = a.flatten.sort.map{|i| i*2}
+  z.delete_if{ |i| i%3 == 0}.uniq!
+  return z
 end
 
 
