@@ -48,7 +48,7 @@ end
 def magic_array(a)
   z =[]
   z = a.flatten.sort.map{|i| i*2}
-  z.delete_if{ |i| i%3 == 0}.uniq!
+  z.reject{ |i| i%3 == 0}.uniq!
   return z
 end
 
