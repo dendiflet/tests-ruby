@@ -1,14 +1,22 @@
-def who_is_bigger(a, b, c)
+def who_is_bigger(e, f, g)
     # Hint: 'def who_is_bigger(a, b, c)'
+  r = [ e, f, g]
 
-    
+  z = {a => e, b => f, c => g }
+    if r.compact !== r
+      return "nil detected"
+    else
+    q1 = z.key(z.values.max)
+      return "#{q1} is bigger"
+    end
 end
 
 
   # Reverse, upcase then removes all L, T and A.
   # Hint: google ruby string
-def reverse_upcase_noLTA("Tries this at Home, Kids"))
-
+def reverse_upcase_noLTA(a)
+  a = a.upcase.reverse
+  
 
 end
 
